@@ -504,7 +504,8 @@ declare namespace Knex {
     | Array<boolean>
     | Buffer
     | object
-    | Knex.Raw;
+    | Knex.Raw
+    | ((fn_helper: Knex.FunctionHelper) => Value);
 
   interface ValueDict extends Dict<Value | Knex.QueryBuilder> {}
   interface AliasDict extends Dict<string> {}
